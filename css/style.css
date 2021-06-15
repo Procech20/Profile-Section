@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+ :root {
+    --paragraph-colors: hsl(0, 0%, 59%);
+    --circle-color: hsl(185, 75%, 39%);
+}
+
+* {
+    font-family: 'kumbh sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+.card {
+    height: 99%;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(227, 10%, 46%);
+    text-align: center;
+}
+
+@media (max-width: 375px) {
+    html,
+    body,
+    .card {
+        height: 99%;
+        font-family: 'Kumbh Sans', sans-serif;
+        color: hsl(227, 10%, 46%);
+        text-align: center;
+    }
+}
+
+html {
+    background: url('/images/bg-pattern-top.svg') top -30rem left -15rem no-repeat, url('/images/bg-pattern-bottom.svg') bottom -40rem right -15rem no-repeat, hsl(185, 75%, 39%);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+hr {
+    opacity: 0.2;
+    margin-top: 1rem;
+}
+
+.circle {
+    top: -350px;
+    left: -100px;
+    position: absolute;
+    height: 750px;
+    width: 750px;
+    border-radius: 80%;
+    background: linear-gradient(7deg, var(--circle-color), rgb(1, 196, 196));
+    z-index: -1;
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    bottom: -750px;
+    left: 750px;
+    height: 750px;
+    width: 750px;
+    border-radius: 50% 50% 50% 50%;
+    background: linear-gradient(95deg, rgb(1, 196, 196), var(--circle-color))
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: white;
+    background-image: url("../assets/images/Capture.PNG");
+    background-repeat: no-repeat no-repeat;
+    background-size: 100% 36%;
+    z-index: 2;
+}
+
+.image-div {
+    background-size: cover;
+    width: 100%;
+    height: 40%;
+}
+
+.white-div {
+    background-color: white;
+    background-size: cover;
+    width: 100%;
+    height: 60%;
+    text-align: center;
+    line-height: 1;
+}
+
+.container img {
+    width: 6rem;
+    height: 6rem;
+    display: block;
+    margin: 5rem 8rem 2rem 8rem;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.white-div p:last-of-type {
+    color: hsl(0, 0%, 59%);
+    margin-top: 10px;
+}
+
+.stats {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stats p {
+    font-weight: 100;
+    font-size: 10px;
+    color: hsl(0, 0%, 59%);
+}
+
+small {
+    color: var(--paragraph-colors);
+}
+
+@media screen and (max-width: 376px) {
+    .circle {
+        top: -100px;
+        left: -220px;
+        height: 350px;
+        width: 350px;
+    }
+    .circle::after {
+        bottom: -485px;
+        left: 420px;
+        height: 350px;
+        width: 350px;
+    }
+    .container {
+        width: 310px;
+    }
+    .container img {
+        margin: 5rem 7rem 2rem 7rem;
+    }
+}
